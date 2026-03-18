@@ -20,19 +20,19 @@ allowed-tools:
 
 Runs a comprehensive on-page SEO validation against a completed blog post and
 generates a pass/fail checklist with specific fixes for each failure. Designed
-to run after writing — catches issues before publishing.
+to run after writing - catches issues before publishing.
 
 ## Workflow
 
 ### Step 1: Read Content
 
 Read the target file and extract:
-- **Frontmatter** — title, description, date, lastUpdated, author, tags,
+- **Frontmatter** - title, description, date, lastUpdated, author, tags,
   canonical, og:image, slug/URL
-- **Heading structure** — H1, H2, H3 hierarchy with full text
-- **Links** — All internal and external links with anchor text
-- **Meta tags** — OG tags, Twitter Card tags, canonical URL
-- **Body content** — Full text for keyword and structural analysis
+- **Heading structure** - H1, H2, H3 hierarchy with full text
+- **Links** - All internal and external links with anchor text
+- **Meta tags** - OG tags, Twitter Card tags, canonical URL
+- **Body content** - Full text for keyword and structural analysis
 
 If the user provides a URL instead of a file path, use WebFetch to retrieve
 the page and extract the relevant elements.
@@ -45,7 +45,7 @@ the page and extract the relevant elements.
 | Keyword placement | Primary keyword in first half of title |
 | Power word | Contains at least one power word (e.g., Guide, Best, How, Why, Essential, Proven, Complete) |
 | Truncation risk | No critical meaning lost if truncated at 60 chars |
-| Uniqueness | Not generic — specific to the content |
+| Uniqueness | Not generic - specific to the content |
 
 ### Step 3: Meta Description
 
@@ -127,7 +127,7 @@ bidirectional linking where possible.
 
 | Check | Pass Criteria |
 |-------|---------------|
-| Length | Short — under 75 characters for the path portion |
+| Length | Short - under 75 characters for the path portion |
 | Keyword presence | Primary keyword or close variant in the URL slug |
 | No dates | URL does not contain /2025/ or /2026/ date segments |
 | No special characters | Only lowercase letters, numbers, and hyphens |
@@ -144,16 +144,16 @@ Output a comprehensive SEO validation report in this format:
 
 **File**: [path or URL]
 **Date**: [check date]
-**Overall**: [X/Y checks passed] — [PASS/NEEDS WORK/FAIL]
+**Overall**: [X/Y checks passed] - [PASS/NEEDS WORK/FAIL]
 
 ### Results
 
 | # | Check | Status | Details | Fix |
 |---|-------|--------|---------|-----|
-| 1 | Title length | PASS | 52 chars | — |
-| 2 | Title keyword | PASS | "keyword" in first half | — |
+| 1 | Title length | PASS | 52 chars | - |
+| 2 | Title keyword | PASS | "keyword" in first half | - |
 | 3 | Title power word | FAIL | No power word found | Add "Guide", "Essential", or "Complete" |
-| 4 | Meta description length | PASS | 155 chars | — |
+| 4 | Meta description length | PASS | 155 chars | - |
 | 5 | Meta description stat | FAIL | No number found | Add a key statistic from the post |
 | ... | ... | ... | ... | ... |
 
@@ -163,7 +163,7 @@ Output a comprehensive SEO validation report in this format:
 **Failed**: [N] checks
 
 ### Priority Fixes
-1. [Most impactful fix — what to change and where]
+1. [Most impactful fix - what to change and where]
 2. [Second most impactful fix]
 3. [Third most impactful fix]
 
@@ -173,7 +173,7 @@ Output a comprehensive SEO validation report in this format:
 ```
 
 Status values:
-- **PASS** — Meets the criteria
-- **FAIL** — Does not meet the criteria, fix provided
-- **WARN** — Partially meets criteria or edge case, recommendation provided
-- **N/A** — Not applicable (e.g., no Twitter Card tags if site has no X account)
+- **PASS** - Meets the criteria
+- **FAIL** - Does not meet the criteria, fix provided
+- **WARN** - Partially meets criteria or edge case, recommendation provided
+- **N/A** - Not applicable (e.g., no Twitter Card tags if site has no X account)

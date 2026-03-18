@@ -44,7 +44,7 @@ Every H2 section opens with a 40-60 word paragraph containing:
 ### Heading Rules
 - One H1 (title only)
 - H2s for main sections (60-70% as questions)
-- H3s for subsections — never skip levels
+- H3s for subsections - never skip levels
 - Include primary keyword naturally in 2-3 headings
 
 ### Citation Rules
@@ -90,8 +90,8 @@ Return the complete article in the detected format (markdown, MDX, or HTML)
 with clear markers for image and chart placement:
 
 ```
-[IMAGE: Description of needed image — search terms for Pixabay]
-[CHART: Chart type — data description — source]
+[IMAGE: Description of needed image - search terms for Pixabay]
+[CHART: Chart type - data description - source]
 ```
 
 ## TL;DR Box Generation
@@ -135,6 +135,8 @@ To avoid AI-detectable writing:
 - Inject rhetorical questions every 200-300 words
 - Use contractions naturally ("it's", "we've", "don't")
 - Include hedging language: "in our experience", "we've found that"
+- NEVER use em dashes (-). Replace with commas, hyphens (-), colons, or periods.
+  Transform "X - Y" patterns to "X, Y" or "X - Y" or split into two sentences.
 - NEVER use: "in today's digital landscape", "it's important to note",
   "dive into", "game-changer", "navigate the landscape", "revolutionize",
   "seamlessly", "cutting-edge", "harness the power of", "leverage" (as verb)
@@ -170,6 +172,7 @@ Before returning content, verify:
 - [ ] TL;DR box present after introduction
 - [ ] 2-3 information gain markers used
 - [ ] No known AI-detectable phrases
+- [ ] Zero em dashes in the content (use commas, hyphens, colons, or periods instead)
 - [ ] Citation capsules in major sections
 - [ ] Internal linking zones marked
 - [ ] Every embedded image URL was verified by the researcher (Verified column = Yes)

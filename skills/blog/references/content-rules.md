@@ -24,7 +24,7 @@ explain.
 
 44.2% of all LLM citations come from the first 30% of text (Growth Memo,
 Feb 2026). Use declarative "X is Y because Z" sentence structures for maximum
-AI extractability. Target 40-60 words per answer paragraph — this is the optimal
+AI extractability. Target 40-60 words per answer paragraph - this is the optimal
 length for paragraph featured snippet capture.
 
 ## Title Optimization
@@ -48,7 +48,7 @@ Avoid: clickbait, ALL CAPS words, excessive punctuation, vague promises.
 Every post must open with a TL;DR summary box immediately after the title/intro:
 
 - **Length**: 40-60 words (standalone summary)
-- **Purpose**: AI extraction target — LLMs frequently cite these verbatim
+- **Purpose**: AI extraction target - LLMs frequently cite these verbatim
 - **Content**: 2-3 sentences covering the core finding/argument with one key statistic
 - **Format**: Visually distinct block (callout, bordered box, or blockquote)
 - **Rule**: Must be comprehensible without reading the rest of the article
@@ -66,7 +66,7 @@ Every post must open with a TL;DR summary box immediately after the title/intro:
 - H2s for main sections (target 6-8 per post)
 - H2 every 200-300 words (Yoast flags sections >300 words without a subheading)
 - H3 every 100-200 words under each H2 for deeper structure
-- H3s for subsections — never skip levels (no H2 → H4)
+- H3s for subsections - never skip levels (no H2 → H4)
 - Include primary keyword naturally in 2-3 headings
 
 ### Question-Format Headings
@@ -87,12 +87,12 @@ show these in People Also Ask. Users scan headings as questions they want answer
 | Max sentence length | 25 words | >20 words | Yoast flags >20 |
 | Sentences over 20 words | ≤25% | >25% | Yoast threshold |
 | Sentence length variance | StdDev ≥5 words | <5 StdDev | Wikipedia AI guidelines |
-| AEO-optimal average | 15-18 words | — | GEO research synthesis |
+| AEO-optimal average | 15-18 words | - | GEO research synthesis |
 
 ### Sentence Rhythm
 Mix short (5-10 words), medium (15-20 words), and occasional long (20-25 words)
 sentences. Uniform sentence length signals AI authorship. Human writing has
-natural burstiness — a short punchy sentence after a longer explanatory one.
+natural burstiness - a short punchy sentence after a longer explanatory one.
 
 No more than 3 consecutive sentences within 5 words of each other's length.
 
@@ -102,8 +102,8 @@ No more than 3 consecutive sentences within 5 words of each other's length.
 |-----------|--------|---------|------------|--------|
 | Paragraph length | 40-80 words | >100 words | 150 words (200 = Yoast red) | Yoast, NNGroup |
 | Sentences per paragraph | 2-3 | >3 | 4 max | NNGroup scanning research |
-| Mobile paragraph max | 60 words / 2-3 visual lines | — | — | WCAG, Baymard |
-| Extractable chunks | 50-150 words | — | — | GEO citation research |
+| Mobile paragraph max | 60 words / 2-3 visual lines | - | - | WCAG, Baymard |
+| Extractable chunks | 50-150 words | - | - | GEO citation research |
 
 ### Key Principle
 Start each paragraph with the most important sentence. This enables both
@@ -116,7 +116,7 @@ Maximum 2-3 sentences per paragraph. This is a hard rule. Single-sentence
 paragraphs are acceptable and often preferred for emphasis. Paragraphs
 exceeding 3 sentences should be split.
 
-One topic per paragraph — no topic drift within a paragraph.
+One topic per paragraph - no topic drift within a paragraph.
 
 ## Readability Targets
 
@@ -125,15 +125,15 @@ One topic per paragraph — no topic drift within a paragraph.
 | Flesch Reading Ease | 60-70 | 55-75 | Yoast ≥60; Spotlight 18K prompts: 60-75 = 31% more AI citations |
 | Flesch-Kincaid Grade | 7-8 | 6-9 (B2B/technical: 8-10) | Siteimprove, First Page Sage |
 | Gunning Fog | 7-8 | Max 12 | Springer 2023: highest correlation with engagement |
-| SMOG | ≤8 | — | Healthcare gold standard |
+| SMOG | ≤8 | - | Healthcare gold standard |
 
 Flesch 60-70 is the optimal band for both engagement and AI citation.
 Content in this range demonstrates expertise through clear expression of
-complex ideas — not oversimplification. The key is conversational authority:
+complex ideas - not oversimplification. The key is conversational authority:
 natural language that mirrors how experts actually explain things.
 
 AI systems prefer content that is fluent, specific, and well-structured.
-Readability alone doesn't determine AI citation — content must also demonstrate
+Readability alone doesn't determine AI citation - content must also demonstrate
 expertise and provide unique value.
 
 ## Visual Content Rules
@@ -141,17 +141,17 @@ expertise and provide unique value.
 | Parameter | Target | Minimum | Source |
 |-----------|--------|---------|--------|
 | Image/visual frequency | Every 200-350 words | 1 per 500 words | BuzzSumo, NNGroup |
-| Bold/emphasis | 3-5 per 300 words | — | Competitive analysis |
-| Bold % of total text | <10% | — | Diminishing impact above 10% |
+| Bold/emphasis | 3-5 per 300 words | - | Competitive analysis |
+| Bold % of total text | <10% | - | Diminishing impact above 10% |
 
 ### Lists
 Use bulleted or numbered lists when 3+ parallel items exist. Don't force lists
-where prose works better — lists are for scannable parallel items, not for
+where prose works better - lists are for scannable parallel items, not for
 every piece of information.
 
 ### Visual Impact
 Content with visuals gets 94% more views and 150% more social engagement.
-NNGroup: visitors read only ~20% of words on a page — visuals anchor scanning
+NNGroup: visitors read only ~20% of words on a page - visuals anchor scanning
 patterns and guide the eye to key information.
 
 ## Anti-Pattern Detection
@@ -164,6 +164,11 @@ delve, tapestry, multifaceted, testament, pivotal, robust, cutting-edge,
 furthermore, indeed, moreover, utilize, leverage, comprehensive, landscape,
 crucial, foster, illuminate, underscore, embark, endeavor, facilitate,
 paramount, nuanced, intricate, meticulous, realm
+
+### Em Dashes (Zero Tolerance)
+NEVER use em dashes (-) in blog content. Em dashes are a strong AI writing
+signal. Replace with commas, hyphens (-), colons, or periods. Split sentences
+if an em dash was used to join two independent clauses.
 
 ### Passive Voice (≤10% of sentences)
 Yoast threshold. Switching to active voice improves readability scores
@@ -209,8 +214,8 @@ Reading time: word count ÷ 225, rounded up. Optimal reading time is
 | Parameter | Target | GEO-Optimized | Source |
 |-----------|--------|--------------|--------|
 | Statistic density | 1 per 200 words | 1 per 150 words | Princeton GEO paper |
-| External citations | 1-3 per 1,000 words | — | GEO best practices |
-| Internal links | 2-5 per 1,000 words | — | SEO + engagement |
+| External citations | 1-3 per 1,000 words | - | GEO best practices |
+| Internal links | 2-5 per 1,000 words | - | SEO + engagement |
 
 Statistics addition boosts AI visibility up to 41% (Princeton GEO paper,
 KDD 2024). For lower-ranked sites, citing authoritative sources boosts

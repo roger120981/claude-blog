@@ -261,12 +261,12 @@ is not available.
 
 ## Integration
 
-Chart generation is built-in — no external dependencies required for full functionality.
+Chart generation is built-in - no external dependencies required for full functionality.
 
 **Optional companion skills** (for deeper analysis of published pages):
-- `/seo` — Full SEO audit of published blog pages
-- `/seo-schema` — Schema markup validation and generation
-- `/seo-geo` — AI citation optimization audit
+- `/seo` - Full SEO audit of published blog pages
+- `/seo-schema` - Schema markup validation and generation
+- `/seo-geo` - AI citation optimization audit
 
 ## Anti-Patterns (Never Do These)
 

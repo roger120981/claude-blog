@@ -73,9 +73,9 @@ If fewer than 3 suitable stock images are found, or the topic is too niche/abstr
 
 1. Note in output: "AI image generation recommended for this topic"
 2. Suggest specific image concepts with domain mode hints:
-   - "Hero: Editorial mode — [description of ideal hero image]"
-   - "Section 3: Infographic mode — [description of data illustration]"
-3. Do NOT call MCP tools directly — the `blog-image` sub-skill handles generation
+   - "Hero: Editorial mode - [description of ideal hero image]"
+   - "Section 3: Infographic mode - [description of data illustration]"
+3. Do NOT call MCP tools directly. The `blog-image` sub-skill handles generation
 
 ### When Analyzing Competition
 
@@ -129,7 +129,7 @@ When finding cover images:
 1. Search Pixabay first: `site:pixabay.com [topic] [context]`
 2. Search Unsplash: `site:unsplash.com [topic]`
 3. Search Pexels: `site:pexels.com [topic]`
-4. All three platforms are equal quality — Pixabay for no-attribution convenience
+4. All three platforms are equal quality - Pixabay for no-attribution convenience
 5. Verify image exists and note dimensions (target: 1200x630 or wider)
 6. Write descriptive alt text: full sentence, 10-125 chars, topic keywords naturally
 

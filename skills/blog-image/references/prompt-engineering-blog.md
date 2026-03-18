@@ -1,4 +1,4 @@
-# Prompt Engineering Reference — Blog Image Generation
+# Prompt Engineering Reference - Blog Image Generation
 
 > Load on-demand when constructing complex prompts for blog images.
 > Adapted from Claude Banana's prompt engineering system for blog-specific use cases.
@@ -7,7 +7,7 @@
 ## The 6-Component Reasoning Brief
 
 Every image prompt should contain these components, written as natural
-narrative paragraphs — NEVER as comma-separated keyword lists.
+narrative paragraphs - NEVER as comma-separated keyword lists.
 
 ### 1. Subject
 The main focus of the image. Describe with physical specificity.
@@ -107,7 +107,7 @@ social sharing preview at 1200x630.
 Best for: Blog headers, feature images, lifestyle content, storytelling.
 **Publication refs:** National Geographic, Kinfolk, The Atlantic, Wired
 **Styling notes:** layered textures, clean compositions, atmospheric depth
-**Locations:** contextual to blog topic — offices, workshops, nature, urban
+**Locations:** contextual to blog topic - offices, workshops, nature, urban
 **Mood:** authoritative, inviting, professional
 
 ### Product Mode
@@ -174,8 +174,8 @@ Use `gemini_chat` and maintain descriptive anchors:
 
 ### Text Rendering Tips
 - Quote exact text: `with the text "OPEN DAILY" in bold condensed sans-serif`
-- **25 characters or less** — practical limit for reliable rendering
-- **2-3 distinct phrases max** — more text fragments degrade quality
+- **25 characters or less** - practical limit for reliable rendering
+- **2-3 distinct phrases max** - more text fragments degrade quality
 - Describe font characteristics, not font names
 - Specify placement: "centered at the top third", "along the bottom edge"
 - High contrast: light text on dark, or vice versa
@@ -188,11 +188,11 @@ Gemini does NOT support negative prompts. Rephrase exclusions:
 
 ## Common Prompt Mistakes
 
-1. **Keyword stuffing** — "8K, masterpiece, best quality" adds nothing to Gemini
-2. **Tag lists instead of prose** — Gemini wants narrative, not "red car, sunset, cinematic"
-3. **Missing lighting** — Single biggest quality differentiator; always specify
-4. **No composition direction** — Results in generic centered framing
-5. **Ignoring aspect ratio** — Always call `set_aspect_ratio` before generating
-6. **Overlong prompts** — Diminishing returns past ~200 words; be precise
-7. **Text > 25 chars** — Rendering degrades; use text-first hack for accuracy
-8. **Not iterating** — Use `gemini_chat` for refinement instead of re-generating
+1. **Keyword stuffing** - "8K, masterpiece, best quality" adds nothing to Gemini
+2. **Tag lists instead of prose** - Gemini wants narrative, not "red car, sunset, cinematic"
+3. **Missing lighting** - Single biggest quality differentiator; always specify
+4. **No composition direction** - Results in generic centered framing
+5. **Ignoring aspect ratio** - Always call `set_aspect_ratio` before generating
+6. **Overlong prompts** - Diminishing returns past ~200 words; be precise
+7. **Text > 25 chars** - Rendering degrades; use text-first hack for accuracy
+8. **Not iterating** - Use `gemini_chat` for refinement instead of re-generating

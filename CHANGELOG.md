@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **blog-write**: AI image generation as alternative/supplement to stock photos in Phase 2 Research
 - **blog-rewrite**: AI image generation for missing/insufficient images in Phase 2 and Phase 4g
 - **blog-researcher**: AI image recommendation output when stock photos are insufficient
-- **visual-media.md**: Option 3 — AI-Generated Cover documentation with domain mode guidance
+- **visual-media.md**: Option 3 - AI-Generated Cover documentation with domain mode guidance
 
 ### Changed
 - Updated install scripts (install.sh, install.ps1) to handle blog-image references and scripts
@@ -58,9 +58,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - **Plugin ecosystem support**: `.claude-plugin/plugin.json` for `/plugin install` compatibility
-- **44 pytest unit tests** for `analyze_blog.py` — covers frontmatter, headings, paragraphs, images, AI detection, citations, FAQ, freshness, readability, links, schema, and integration tests
-- **GitHub Actions CI**: 3 jobs — Python tests (3.11 + 3.12), SKILL.md frontmatter validation, plugin.json validation
-- **DataForSEO MCP integration** documentation — recommended primary MCP server for live SEO data (SERP, keywords, backlinks, on-page, domain analytics, content analysis, AI optimization)
+- **44 pytest unit tests** for `analyze_blog.py`, covers frontmatter, headings, paragraphs, images, AI detection, citations, FAQ, freshness, readability, links, schema, and integration tests
+- **GitHub Actions CI**: 3 jobs - Python tests (3.11 + 3.12), SKILL.md frontmatter validation, plugin.json validation
+- **DataForSEO MCP integration** documentation, recommended primary MCP server for live SEO data (SERP, keywords, backlinks, on-page, domain analytics, content analysis, AI optimization)
 - `pyproject.toml` with dependency groups (core, advanced, dev)
 - `CONTRIBUTING.md` with development guidelines
 - `.mcp.json` for optional MCP server configuration
@@ -85,7 +85,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.2.1] - 2026-03-06
 
 ### Fixed
-- **install.sh**: Move `TEMP_DIR` declaration to global scope so the `EXIT` trap can access it after `main()` returns (fixes "unbound variable" error with `set -u` when installing via `curl | bash`) — thanks [@twdnhfr](https://github.com/twdnhfr)
+- **install.sh**: Move `TEMP_DIR` declaration to global scope so the `EXIT` trap can access it after `main()` returns (fixes "unbound variable" error with `set -u` when installing via `curl | bash`)
 
 ## [1.2.0] - 2026-02-18
 
@@ -110,15 +110,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.1.0] - 2026-02-18
 
 ### Added
-- **Built-in SVG chart generation** (`blog-chart` sub-skill) — eliminates external `/svg` dependency
+- **Built-in SVG chart generation** (`blog-chart` sub-skill), eliminates external `/svg` dependency
   - Supports 7 chart types: horizontal bar, grouped bar, donut, line, lollipop, area, radar
   - Dark-mode compatible, accessible (WCAG), platform-aware (HTML/JSX auto-detection)
-- **Image URL verification** in researcher agent — validates HTTP 200 before embedding
-- **Mid-writing readability check** in writer agent — self-checks Flesch targets before returning
+- **Image URL verification** in researcher agent, validates HTTP 200 before embedding
+- **Mid-writing readability check** in writer agent, self-checks Flesch targets before returning
 - **Image density guidelines** by content type in visual-media.md
 
 ### Changed
-- claude-blog is now fully self-contained — no external skill dependencies required
+- claude-blog is now fully self-contained, no external skill dependencies required
 - Integration section updated to list companion skills as optional
 - Installer scripts updated for 13 sub-skills
 

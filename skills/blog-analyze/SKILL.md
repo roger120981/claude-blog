@@ -134,6 +134,7 @@ Analyze the post for AI-generated content risk:
 15. "Harness the power"
 16. "Dive deep"
 17. "Unlock the potential"
+18. Em dashes (-) - count all instances, flag as AI writing pattern
 
 **Vocabulary Diversity** (Type-Token Ratio):
 - Calculate unique words / total words

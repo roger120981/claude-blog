@@ -29,7 +29,7 @@ Score each blog post against this checklist. Used by `/blog analyze`.
 
 | Check | Points | Pass Criteria |
 |-------|--------|---------------|
-| Author attribution (named, with bio) | 4 | Real name, credentials, E-E-A-T bio — not a sales pitch |
+| Author attribution (named, with bio) | 4 | Real name, credentials, E-E-A-T bio - not a sales pitch |
 | Source citations (tier 1-3, inline format) | 4 | `([Source](url), year)` format, 8+ unique stats, zero fabricated |
 | Trust indicators (contact, about, transparency) | 4 | Site has contact page, about page, editorial policy |
 | Experience signals (first-person markers) | 3 | "When we tested...", "In our experience...", original photos/data |

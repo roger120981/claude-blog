@@ -1,6 +1,6 @@
-# claude-blog — AI Blog Creation Skill for Claude Code
+# claude-blog - AI Blog Creation Skill for Claude Code
 
-![Claude Blog — AI-Powered Blog Creation](assets/header.jpeg)
+![Claude Blog - AI-Powered Blog Creation](assets/header.jpeg)
 
 [![CI](https://github.com/AgriciDaniel/claude-blog/actions/workflows/ci.yml/badge.svg)](https://github.com/AgriciDaniel/claude-blog/actions/workflows/ci.yml)
 [![GitHub release](https://img.shields.io/github/v/release/AgriciDaniel/claude-blog)](https://github.com/AgriciDaniel/claude-blog/releases/latest)
@@ -9,7 +9,7 @@
 ![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue)
 ![Sub-Skills](https://img.shields.io/badge/Sub--Skills-15-orange)
 
-claude-blog is a Claude Code skill ecosystem for creating, optimizing, and managing blog content at scale. It generates complete articles, briefs, calendars, and schemas — dual-optimized for Google rankings and AI citation platforms (ChatGPT, Perplexity, AI Overviews).
+claude-blog is a Claude Code skill ecosystem for creating, optimizing, and managing blog content at scale. It generates complete articles, briefs, calendars, and schemas, dual-optimized for Google rankings and AI citation platforms (ChatGPT, Perplexity, AI Overviews).
 
 ## Table of Contents
 
@@ -102,7 +102,7 @@ Every article targets both Google rankings and AI citation platforms:
 
 ### Visual Media
 - Pixabay/Unsplash/Pexels image sourcing with alt text
-- AI image generation via Gemini (hero images, inline illustrations, social cards) — optional, requires free Google AI API key
+- AI image generation via Gemini (hero images, inline illustrations, social cards), optional, requires free Google AI API key
 - Built-in SVG chart generation (bar, grouped bar, lollipop, donut, line, area, radar)
 - Image density targets by content type
 - Image URL verification (HTTP 200 check before embedding)
@@ -180,7 +180,7 @@ Windows (PowerShell):
 
 ## Integration
 
-Chart generation is built-in — no external dependencies required for full functionality.
+Chart generation is built-in. No external dependencies required for full functionality.
 
 **Optional companion skills** (for deeper analysis of published pages):
 

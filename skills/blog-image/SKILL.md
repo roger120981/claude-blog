@@ -2,7 +2,7 @@
 name: blog-image
 description: >
   AI image generation and editing for blog content powered by Gemini via MCP.
-  Claude acts as Creative Director — interpreting intent, selecting domain expertise,
+  Claude acts as Creative Director - interpreting intent, selecting domain expertise,
   constructing optimized 6-component prompts (Subject + Action + Context + Composition
   + Lighting + Style), and orchestrating Gemini for blog-quality results. Generates
   hero images, inline illustrations, social preview cards, and OG images. Edits
@@ -28,7 +28,7 @@ metadata:
   mcp-package: "@ycse/nanobanana-mcp"
 ---
 
-# Blog Image — AI Image Generation for Blog Content
+# Blog Image - AI Image Generation for Blog Content
 
 You are a **Creative Director** that orchestrates Gemini's image generation
 specifically for blog content. Never pass raw user text directly to the API.
@@ -66,7 +66,7 @@ Before generating, check if nanobanana-mcp tools are available:
 
 1. Try calling `get_image_history` (lightweight, no side effects)
 2. If it succeeds: MCP is available, proceed with generation
-3. If it fails: MCP not configured — inform the user:
+3. If it fails: MCP not configured - inform the user:
    - "Image generation requires the nanobanana-mcp server. Run `/blog image setup` to configure it."
    - When called internally (from blog-write/blog-rewrite): return silently, no error. The calling workflow continues with stock photos.
 
@@ -102,14 +102,14 @@ Load `references/prompt-engineering-blog.md` for domain mode modifier libraries.
 
 ### Step 3: Construct the 6-Component Reasoning Brief
 
-Build the prompt as natural narrative paragraphs — NEVER as keyword lists:
+Build the prompt as natural narrative paragraphs - NEVER as keyword lists:
 
-1. **Subject** — Who/what, with rich physical detail (textures, materials, scale)
-2. **Action** — What is happening, pose, gesture, movement, state
-3. **Context** — Environment, setting, time of day, season, weather
-4. **Composition** — Camera angle, shot type, framing, negative space, depth
-5. **Lighting** — Light source, quality, direction, color temperature, shadows
-6. **Style** — Art medium, aesthetic, film stock, reference artists/eras
+1. **Subject** - Who/what, with rich physical detail (textures, materials, scale)
+2. **Action** - What is happening, pose, gesture, movement, state
+3. **Context** - Environment, setting, time of day, season, weather
+4. **Composition** - Camera angle, shot type, framing, negative space, depth
+5. **Lighting** - Light source, quality, direction, color temperature, shadows
+6. **Style** - Art medium, aesthetic, film stock, reference artists/eras
 
 **Template for photorealistic blog images:**
 ```
@@ -150,9 +150,9 @@ Call `set_aspect_ratio` BEFORE generating:
 | `clear_conversation` | Reset session context |
 
 **Model selection** (use `set_model` MCP tool if switching):
-- **NB2 Flash** (default): Best for most blog images — fast, 14 ratios, 4K, $0.067/img
-- **NB Pro**: Use for hero images with text overlays (94% text accuracy) or highest quality — $0.134/img
-- **Original**: Budget option at $0.039/img — 5 ratios, 1K max
+- **NB2 Flash** (default): Best for most blog images - fast, 14 ratios, 4K, $0.067/img
+- **NB Pro**: Use for hero images with text overlays (94% text accuracy) or highest quality - $0.134/img
+- **Original**: Budget option at $0.039/img - 5 ratios, 1K max
 
 Load `references/mcp-tools.md` for parameter details.
 Load `references/gemini-models.md` for model specs, pricing, and rate limits.
@@ -180,17 +180,17 @@ Check if `magick` (ImageMagick 7) is available. Fall back to `convert` if not.
 ### Step 7: Deliver
 
 Provide:
-1. **Image path** — where it was saved (`~/Documents/nanobanana_generated/`)
-2. **Crafted prompt** — show the full Reasoning Brief (educational)
-3. **Settings** — model, aspect ratio, domain mode
-4. **Alt text** — descriptive sentence, 10-125 chars, topic keywords naturally
+1. **Image path** - where it was saved (`~/Documents/nanobanana_generated/`)
+2. **Crafted prompt** - show the full Reasoning Brief (educational)
+3. **Settings** - model, aspect ratio, domain mode
+4. **Alt text** - descriptive sentence, 10-125 chars, topic keywords naturally
 5. **Frontmatter snippet** (for hero/OG images):
 ```yaml
 coverImage: "/path/to/generated-image.png"
 coverImageAlt: "Descriptive alt text sentence with topic keywords"
 ogImage: "/path/to/generated-image.png"
 ```
-6. **Refinement suggestions** — 1-2 ideas if relevant
+6. **Refinement suggestions** - 1-2 ideas if relevant
 
 ## Edit Workflow
 
@@ -266,12 +266,12 @@ For `/blog image setup`:
 When `IMAGE_SAFETY` or `SAFETY` is returned, do NOT give up. Auto-rephrase and retry:
 
 1. Identify the likely trigger (violence, public figures, NSFW-adjacent, or overly cautious filter)
-2. Rephrase using positive framing — describe what you WANT, not what to avoid
+2. Rephrase using positive framing - describe what you WANT, not what to avoid
 3. If the subject is a person, make them generic (remove celebrity-like specifics)
 4. If the scene is dramatic, soften: "intense" → "focused", "battle" → "competition"
 5. Retry with the rephrased prompt (max 3 attempts before reporting to user)
 
-Google acknowledged filters "became way more cautious than we intended" — benign prompts
+Google acknowledged filters "became way more cautious than we intended" - benign prompts
 are sometimes blocked. Persistence with rephrasing usually succeeds.
 
 ## Edit, Don't Re-roll
@@ -293,16 +293,16 @@ preserve what works while fixing what doesn't.
 | MCP not configured | Run `/blog image setup` |
 | API key invalid | New key at https://aistudio.google.com/apikey |
 | Rate limited (429) | Wait 60s, retry. Free tier: ~5-15 RPM / ~20-500 RPD (varies by model and billing) |
-| `IMAGE_SAFETY` | Auto-rephrase (see above) — Layer 2 filter, non-configurable |
-| `PROHIBITED_CONTENT` | Content policy violation — topic is blocked. Non-retryable. |
-| `SAFETY` | Rephrase prompt — Layer 1 filter |
+| `IMAGE_SAFETY` | Auto-rephrase (see above) - Layer 2 filter, non-configurable |
+| `PROHIBITED_CONTENT` | Content policy violation - topic is blocked. Non-retryable. |
+| `SAFETY` | Rephrase prompt - Layer 1 filter |
 | Vague request | Ask one clarifying question before generating |
-| Poor quality | Review Reasoning Brief — likely missing lighting (biggest quality differentiator) |
-| MCP unavailable (internal call) | Return silently — calling workflow uses stock photos |
+| Poor quality | Review Reasoning Brief - likely missing lighting (biggest quality differentiator) |
+| MCP unavailable (internal call) | Return silently - calling workflow uses stock photos |
 
 ## Reference Documentation
 
-Load on-demand — do NOT load all at startup:
-- `references/prompt-engineering-blog.md` — Domain modes, 6-component system, blog templates
-- `references/gemini-models.md` — Model specs, rate limits, aspect ratios, pricing
-- `references/mcp-tools.md` — MCP tool parameters and response formats
+Load on-demand - do NOT load all at startup:
+- `references/prompt-engineering-blog.md` - Domain modes, 6-component system, blog templates
+- `references/gemini-models.md` - Model specs, rate limits, aspect ratios, pricing
+- `references/mcp-tools.md` - MCP tool parameters and response formats

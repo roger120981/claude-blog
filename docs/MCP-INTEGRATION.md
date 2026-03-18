@@ -37,11 +37,11 @@ platforms.
 
 ---
 
-## Nano Banana MCP — AI Image Generation
+## Nano Banana MCP - AI Image Generation
 
 **The nanobanana-mcp server enables AI image generation** within blog workflows.
 When configured, `/blog write` and `/blog rewrite` can generate custom hero images,
-inline illustrations, and social preview cards via Gemini — in addition to stock
+inline illustrations, and social preview cards via Gemini, in addition to stock
 photo sourcing from Pixabay/Unsplash/Pexels.
 
 ### What It Enables
@@ -85,7 +85,7 @@ python3 skills/blog-image/scripts/validate_image_setup.py
 
 **DataForSEO is the recommended MCP integration for `claude-blog`.** It provides
 a single unified API covering SERP data, keyword research, backlink analysis,
-on-page auditing, domain analytics, content analysis, and AI optimization —
+on-page auditing, domain analytics, content analysis, and AI optimization,
 replacing the need for separate Ahrefs, Semrush, GSC, and PageSpeed integrations.
 
 ### What It Enables
@@ -109,9 +109,9 @@ Content briefs include real keyword metrics from DataForSEO Labs:
 
 ```
 Target Keywords (DataForSEO Labs)
-- Primary: "kubernetes monitoring" — 2,400/mo, KD 45, Intent: informational
-- Secondary: "k8s observability" — 890/mo, KD 32, Intent: informational
-- Question: "how to monitor kubernetes" — 720/mo, KD 28
+- Primary: "kubernetes monitoring" - 2,400/mo, KD 45, Intent: informational
+- Secondary: "k8s observability" - 890/mo, KD 32, Intent: informational
+- Question: "how to monitor kubernetes" - 720/mo, KD 28
 
 Competitor SERP Analysis
 | Position | Domain              | Backlinks | Word Count |
@@ -594,8 +594,8 @@ Validate both content quality and technical readiness for AI crawlers:
 | Integration | Status | Priority |
 |------------|--------|----------|
 | Nano Banana (Gemini) | **Available** | AI image generation for blog content |
-| DataForSEO | **Available** | Recommended — covers SERP, keywords, backlinks, on-page, domain, content, AI optimization |
-| Google Search Console | Planned | High — for first-party traffic/CTR data |
+| DataForSEO | **Available** | Recommended: covers SERP, keywords, backlinks, on-page, domain, content, AI optimization |
+| Google Search Console | Planned | High - for first-party traffic/CTR data |
 | Google Analytics (GA4) | Future | Low |
 | WordPress REST API | Future | Low |
 | Contentful / Sanity CMS | Future | Low |

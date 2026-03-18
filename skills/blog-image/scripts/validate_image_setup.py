@@ -51,7 +51,7 @@ def check(label: str, passed: bool, detail: str = "") -> bool:
     status = "PASS" if passed else "FAIL"
     msg = f"  [{status}] {label}"
     if detail:
-        msg += f" — {detail}"
+        msg += f" - {detail}"
     print(msg)
     return passed
 
@@ -83,7 +83,7 @@ def find_mcp_config() -> tuple:
 
 
 def main() -> int:
-    print("claude-blog — Image Generation Setup Validation")
+    print("claude-blog - Image Generation Setup Validation")
     print("=" * 48)
     results = []
 
@@ -135,7 +135,7 @@ def main() -> int:
             results.append(check(
                 "GOOGLE_AI_API_KEY is set",
                 True,
-                f"{key} (env var placeholder — ensure this variable is exported in your shell)",
+                f"{key} (env var placeholder - ensure this variable is exported in your shell)",
             ))
         else:
             results.append(check(
@@ -144,12 +144,12 @@ def main() -> int:
                 f"{key[:8]}...{key[-4:]}" if len(key) > 12 else key or "(empty)",
             ))
 
-        # 7. Model configured (optional — package has a default)
+        # 7. Model configured (optional - package has a default)
         model = env.get("NANOBANANA_MODEL", "")
         results.append(check(
             "NANOBANANA_MODEL is set",
-            True,  # Always pass — model is optional, package defaults to gemini-3.1-flash
-            model or "(not set — package will use default model)",
+            True,  # Always pass - model is optional, package defaults to gemini-3.1-flash
+            model or "(not set - package will use default model)",
         ))
 
     # 8. Node.js/npx available
@@ -157,7 +157,7 @@ def main() -> int:
     results.append(check(
         "npx is available in PATH",
         has_npx,
-        shutil.which("npx") or "not found — install Node.js 18+",
+        shutil.which("npx") or "not found - install Node.js 18+",
     ))
 
     # 9. Output directory

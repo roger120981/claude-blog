@@ -1,4 +1,4 @@
-# Claude Blog — Blog Creation & Optimization Skill
+# Claude Blog - Blog Creation & Optimization Skill
 
 ## Project Overview
 

@@ -1,30 +1,30 @@
-# Gemini Image Generation Models — Nano Banana
+# Gemini Image Generation Models - Nano Banana
 
 > Last updated: 2026-03-14
 > Aligned with Google's March 2026 API state and pricing
 
 ## Available Models
 
-### gemini-3.1-flash-image-preview (Recommended — Speed + Quality)
+### gemini-3.1-flash-image-preview (Recommended - Speed + Quality)
 | Property | Value |
 |----------|-------|
 | **Model ID** | `gemini-3.1-flash-image-preview` |
 | **Tier** | Nano Banana 2 (Flash) |
-| **Speed** | Fast — optimized for high-volume use |
+| **Speed** | Fast - optimized for high-volume use |
 | **Aspect Ratios** | All 14 ratios (see table below) |
 | **Max Resolution** | Up to 4096×4096 (4K tier) |
 | **Features** | Google Search grounding (web + image), thinking levels, image-only output, extreme aspect ratios, 512px drafts |
-| **Rate Limits (Free)** | ~5-15 RPM / ~20-500 RPD (preview model — more restrictive than stable) |
+| **Rate Limits (Free)** | ~5-15 RPM / ~20-500 RPD (preview model - more restrictive than stable) |
 | **Output Tokens** | ~1,290 output tokens per image |
 | **Cost (1K)** | ~$0.067/image |
 | **Best For** | Most blog images, rapid iteration, batch generation |
 
-### gemini-3-pro-image-preview (Highest Quality — Text + Detail)
+### gemini-3-pro-image-preview (Highest Quality - Text + Detail)
 | Property | Value |
 |----------|-------|
 | **Model ID** | `gemini-3-pro-image-preview` |
 | **Tier** | Nano Banana Pro |
-| **Speed** | Slower — uses reasoning before generating (generates interim images internally) |
+| **Speed** | Slower - uses reasoning before generating (generates interim images internally) |
 | **Aspect Ratios** | All 14 ratios |
 | **Max Resolution** | Up to 4096×4096 (4K tier) |
 | **Features** | 94% text accuracy (quoted text), 14 reference images, C2PA Content Credentials |
@@ -43,14 +43,14 @@
 | **Speed** | Fast |
 | **Aspect Ratios** | 1:1, 16:9, 9:16, 4:3, 3:4 (5 only) |
 | **Max Resolution** | Up to 1024×1024 (1K tier) |
-| **Rate Limits (Free)** | ~10-15 RPM / ~500 RPD (stable — more generous than preview models) |
+| **Rate Limits (Free)** | ~10-15 RPM / ~500 RPD (stable - more generous than preview models) |
 | **Cost (1K)** | ~$0.039/image |
 | **Best For** | Budget-conscious workflows, proven quality, stable fallback |
 
 ## Deprecated Models (DO NOT USE)
 
 ### gemini-2.5-flash-image-preview
-- **Status:** Shut down — use the stable `gemini-2.5-flash-image` variant
+- **Status:** Shut down - use the stable `gemini-2.5-flash-image` variant
 
 ### gemini-2.0-flash-exp
 - **Status:** Deprecated, shutdown June 1, 2026. Use `gemini-2.5-flash-image`
@@ -110,7 +110,7 @@ Google cut free-tier limits by ~92% in December 2025. Current structure:
 | Tier 1 (Pay-as-you-go) | 150-300 | 1,500-10,000 | Enable billing on Google Cloud project |
 | Tier 2 ($250+ spend) | 1,000+ | Unlimited | Cumulative $250+ API spend |
 
-**Important:** Preview models (NB2, Pro) have more restrictive limits than stable models. Free tier for image generation may require billing to be enabled — some users report 0 IPM (images per minute) without billing.
+**Important:** Preview models (NB2, Pro) have more restrictive limits than stable models. Free tier for image generation may require billing to be enabled - some users report 0 IPM (images per minute) without billing.
 
 ## Pricing (March 2026)
 
@@ -137,7 +137,7 @@ Google cut free-tier limits by ~92% in December 2025. Current structure:
 
 Useful for brand-consistent blog imagery: provide brand style references to maintain visual identity across generated images.
 
-## Safety Filters — Dual Layer Architecture
+## Safety Filters - Dual Layer Architecture
 
 ### Layer 1: Input Filters (Configurable)
 Standard harm category filtering via `safetySettings` API parameter. Covers hate speech, harassment, sexually explicit, and dangerous content.
@@ -145,15 +145,15 @@ Standard harm category filtering via `safetySettings` API parameter. Covers hate
 ### Layer 2: Output Filters (NON-CONFIGURABLE)
 Server-side analysis of the **generated image itself**. Cannot be disabled through any API parameter.
 - Returns `finishReason: "IMAGE_SAFETY"` (distinct from `"SAFETY"`)
-- Known to be overly cautious — Google acknowledged "filters became way more cautious than we intended"
+- Known to be overly cautious - Google acknowledged "filters became way more cautious than we intended"
 - Benign prompts like "dog" or "bowl of cereal" have been blocked
 - Celebrity blocking tightened significantly with NB2
 
 | `finishReason` | Meaning | Layer | Retryable? |
 |----------------|---------|:-----:|:----------:|
-| `STOP` | Successful generation | — | N/A |
+| `STOP` | Successful generation | - | N/A |
 | `IMAGE_SAFETY` | Output blocked by Layer 2 | 2 | Rephrase prompt |
-| `PROHIBITED_CONTENT` | Content policy violation | 1 | No — topic blocked |
+| `PROHIBITED_CONTENT` | Content policy violation | 1 | No - topic blocked |
 | `SAFETY` | General safety block | 1 | Rephrase prompt |
 | `RECITATION` | Detected copyrighted content | 2 | Rephrase prompt |
 
@@ -161,13 +161,13 @@ Server-side analysis of the **generated image itself**. Cannot be disabled throu
 
 ## Content Credentials
 
-- **SynthID watermarks** are always embedded (invisible, machine-readable). Survives rescaling, compression, and most edits — cannot be disabled
+- **SynthID watermarks** are always embedded (invisible, machine-readable). Survives rescaling, compression, and most edits - cannot be disabled
 - **C2PA Content Credentials** are embedded on Nano Banana Pro images from Gemini App, Vertex AI, and Google Ads
 
 ## Key Limitations
 - No native transparent backgrounds (workaround: prompt green background, then chromakey removal)
-- Text rendering quality varies — keep text under 25 characters for best results (Pro achieves 94% accuracy with quoted text)
-- Safety filters may block benign prompts — use auto-rephrase workflow
+- Text rendering quality varies - keep text under 25 characters for best results (Pro achieves 94% accuracy with quoted text)
+- Safety filters may block benign prompts - use auto-rephrase workflow
 - Session context resets between Claude Code conversations
 - `imageSize` and thinking level depend on MCP package version support
 - No video generation (use Veo 3.1 for image-to-video workflows)

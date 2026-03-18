@@ -41,7 +41,7 @@ Chart Request:
 
 ## Chart Type Selection
 
-Select based on the data pattern. Diversity is mandatory — never repeat a
+Select based on the data pattern. Diversity is mandatory - never repeat a
 type within one post.
 
 | Data Pattern | Best Chart Type |

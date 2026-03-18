@@ -187,7 +187,7 @@ def main() -> None:
         api_key = os.environ.get("GOOGLE_AI_API_KEY")
 
     if not api_key:
-        print("claude-blog — Image Generation MCP Setup")
+        print("claude-blog - Image Generation MCP Setup")
         print("=" * 45)
         print(f"\nGet your free API key at: https://aistudio.google.com/apikey")
         print()
